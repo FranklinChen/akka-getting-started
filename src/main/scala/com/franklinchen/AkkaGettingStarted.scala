@@ -27,7 +27,7 @@ object AkkaGettingStarted extends App {
   counter ! Tick
   counter ! Tick
 
-  implicit val timeout = Timeout(5 seconds)
+  implicit val timeout = Timeout(5.seconds)
 
   (counter ? Get) onSuccess {
     case count => println("Count is " + count)
